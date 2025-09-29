@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IT Helpdesk Assistant</title>
+  <style>
+    /* These styles make the page full height */
+    html {
+        height: 100%;
+        margin: 0;
+    }
+
+    body {
+      /* Basic page setup */
+      min-height: 100%;
+      margin: 0;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+
+      /* Background image properties */
+      background-image: url('https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2017_05_IT-companies-scaled.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* Styles for the text to make it readable */
+    h1 {
+      font-size: 3em;
+      color: #ffffff;
+      text-shadow: 2px 2px 8px #000000;
+    }
+
+    p {
+      font-size: 1.2em;
+      text-shadow: 2px 2px 8px #000000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Automated IT Assistant</h1>
+  <p>I can help you with password resets, software installation, and troubleshooting.</p>
+  <p>How can I assist you today?</p>
+
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "80466c7f-d992-4bf3-9c7a-fb4ab74c59d9", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "e7c2ce64-b2cc-4551-8e8c-ab0f33f3e786", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
